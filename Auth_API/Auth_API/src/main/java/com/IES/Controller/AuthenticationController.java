@@ -41,4 +41,7 @@ public class AuthenticationController {
 
 		return new ResponseEntity(authService.login(loginRequest), HttpStatus.OK);
 	}
+	public void trial() {
+		System.out.println("This is trial for git perfection");
+	}
 }
