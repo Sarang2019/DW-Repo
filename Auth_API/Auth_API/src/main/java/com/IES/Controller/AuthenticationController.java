@@ -40,7 +40,7 @@ public class AuthenticationController {
 	public ResponseEntity<?> signIn(@Valid @RequestBody LoginRequestDTO loginRequest) {
 		log.info("Controller Login :: " + loginRequest);
 		log.debug("Debug LoginRequesDTO value :: " + loginRequest);
-
+log.info("Rajat Dhatrak");
 		return new ResponseEntity(authService.login(loginRequest), HttpStatus.OK);
 	}
 }
