@@ -30,6 +30,8 @@ public class AuthenticationController {
 	public ResponseEntity<?> signUp(@Valid @RequestBody SignUpDto sdtorequest) {
 		log.info("Controller Layer ::" + sdtorequest);
 		log.debug("Debug SignUpDto Value :: " + sdtorequest);
+		
+		log.debug("log added succesffulyy");
 
 		return new ResponseEntity(authService.signUp(sdtorequest), HttpStatus.OK);
 	}
