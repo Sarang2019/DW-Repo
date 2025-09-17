@@ -1,0 +1,42 @@
+
+spring:
+  application:
+    name: Auth
+  boot:
+    admin:
+      client:
+        url: http://localhost:2002
+        instance:
+          prefer-ip: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mainproject
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true  
+server:
+  port: 2121
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultzone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'  
+        
+jwt:
+  secret: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+  expiration-time: 3600000
+        
