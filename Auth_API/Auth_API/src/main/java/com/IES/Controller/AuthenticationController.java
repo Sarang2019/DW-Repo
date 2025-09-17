@@ -31,6 +31,11 @@ public class AuthenticationController {
 		log.info("Controller Layer ::" + sdtorequest);
 		log.debug("Debug SignUpDto Value :: " + sdtorequest);
 
+=======
+		
+		log.debug("log added succesffulyy");
+
+
 		return new ResponseEntity(authService.signUp(sdtorequest), HttpStatus.OK);
 	}
 
@@ -39,9 +44,15 @@ public class AuthenticationController {
 		log.info("Controller Login :: " + loginRequest);
 		log.debug("Debug LoginRequesDTO value :: " + loginRequest);
 
+
 		return new ResponseEntity(authService.login(loginRequest), HttpStatus.OK);
 	}
 	public void trial() {
 		System.out.println("This is trial for git perfection");
 	}
+=======
+log.info("Rajat Dhatrak");
+		return new ResponseEntity(authService.login(loginRequest), HttpStatus.OK);
+	}
+
 }
